@@ -35,6 +35,10 @@ void ComputeShader::dispatch( int threadGroupsX, int threadGroupsY, int threadGr
 	gl::memoryBarrier( GL_SHADER_STORAGE_BARRIER_BIT );
 }
 
+///////////////////////////////
+// ----------------
+///////////////////////////////
+
 ComputeBufferRef ComputeBuffer::create( const void * data, int size, int blockSize )
 {
 	return ComputeBufferRef( new ComputeBuffer{ data, size, blockSize } );
