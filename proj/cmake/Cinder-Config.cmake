@@ -5,6 +5,8 @@ if( NOT TARGET Cinder- )
 	list( APPEND Cinder-_SOURCES
 		${Cinder-_SOURCE_PATH}/Assets.h
 		${Cinder-_SOURCE_PATH}/Assets.cpp
+		${Cinder-_SOURCE_PATH}/CameraBasic.h
+		${Cinder-_SOURCE_PATH}/CameraBasic.cpp
 		${Cinder-_SOURCE_PATH}/Compute.h
 		${Cinder-_SOURCE_PATH}/Compute.cpp
 		${Cinder-_SOURCE_PATH}/Environment.h
