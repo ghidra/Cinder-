@@ -16,12 +16,17 @@ class CameraBasic{
 		~CameraBasic(){}
 		//void Update(vector<float> audioAnalysis, float deltaTime=0.0f, float elapsedTime=0.0f, float fadeBlend=1.0f, float fadeMode=1.0) override;
 		//virtual void Setup(float distance = 500.0f)
-		virtual void Update(float deltaTime = 0.0f, float elapsedTime = 0.0f);
-		virtual CameraPersp GetPerspective(){return mPersp;}
+		virtual void Update(float deltaTime = 0.0f);
+		virtual void keyDown( KeyEvent event );
+		virtual void keyUp( KeyEvent event );
+		virtual CameraPersp& GetPerspective(){return mPersp;}
 	private:
 		CameraPersp 	mPersp;
 		//Quatf			mSceneRotation;
 		float			mDistance;
 		vec3			mEye, mCenter, mUp;
+
+		float			mMovementSpeed, mLocalDeltaTime;
+		bool			mMovingForward, mMovingBackward, mMovingLeft, mMovingRight, mMovingUpward, mMovingDownward;
 
 };
