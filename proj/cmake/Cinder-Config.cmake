@@ -7,6 +7,8 @@ if( NOT TARGET Cinder- )
 		${Cinder-_SOURCE_PATH}/Assets.cpp
 		${Cinder-_SOURCE_PATH}/CameraBasic.h
 		${Cinder-_SOURCE_PATH}/CameraBasic.cpp
+		${Cinder-_SOURCE_PATH}/CameraFollow.h
+		${Cinder-_SOURCE_PATH}/CameraFollow.cpp
 		${Cinder-_SOURCE_PATH}/Compute.h
 		${Cinder-_SOURCE_PATH}/Compute.cpp
 		${Cinder-_SOURCE_PATH}/Environment.h
