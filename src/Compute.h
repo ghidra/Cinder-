@@ -29,6 +29,7 @@ class ComputeBuffer {
 public:
 	static ComputeBufferRef		create( const void * data, int size, int blockSize );
 	virtual						~ComputeBuffer() {}
+	//void clear( const void * data, int size, int blockSize);
 
 	gl::SsboRef&				getSsbo() { return mSsbo; }
 	const gl::SsboRef&			getSsbo() const { return mSsbo; }

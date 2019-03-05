@@ -229,7 +229,7 @@ ci::signals::Connection AssetManager::getShader( const fs::path &vertex, const f
 	};
 
 	// add a callback to this group that will fire when the shader is modified
-	auto group = getAssetGroupRef( hash );	
+	auto group = getAssetGroupRef( hash );
 	auto conn = group->addModifiedCallback( glslModifiedCallback );
 
 	// ensure the callback specific to this request is fired on initial request
@@ -241,14 +241,14 @@ void AssetManager::initShaderPreprocessorLazy()
 {
 	if( mShaderPreprocessor )
 		return;
-		
+
 	mShaderPreprocessor = make_unique<gl::ShaderPreprocessor>();
 
 #if defined( CINDER_GL_ES )
 	mShaderPreprocessor->setVersion( 300 );
 	mShaderPreprocessor->addDefine( "CINDER_GL_ES" );
 #else
-	mShaderPreprocessor->setVersion( 410 );
+	mShaderPreprocessor->setVersion( 440 );
 	mShaderPreprocessor->addDefine( "CINDER_GL_CORE" );
 #endif
 

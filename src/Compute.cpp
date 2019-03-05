@@ -49,6 +49,10 @@ ComputeBuffer::ComputeBuffer( const void * data, int size, int blockSize )
 {
 	mSsbo = gl::Ssbo::create( mSize * blockSize, data, GL_STATIC_DRAW );
 }
+/*void ComputeBuffer::clear( const void * data, int size, int blockSize)
+{
+	mSsbo = gl::Ssbo::create( size * blockSize, data, GL_DYNAMIC_DRAW );
+}*/
 
 ScopedComputeBuffer::ScopedComputeBuffer( const ComputeBufferRef &bufferObj, uint8_t bufferUnit )
 	: mCtx( gl::context() )
